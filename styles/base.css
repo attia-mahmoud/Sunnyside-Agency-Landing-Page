@@ -1,0 +1,208 @@
+/* --------------------- */
+/* Font Imports */
+/* --------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:opsz@9..144&display=swap');
+/* --------------------- */
+/* Custom Properties */
+/* --------------------- */
+
+:root {
+  /* colors */
+  --clr-primary-red: hsl(7, 99%, 70%);
+  --clr-primary-yellow: hsl(51, 100%, 49%);
+  --clr-primary-cyan-200: hsl(167, 40%, 24%);
+  --clr-primary-cyan-100: hsl(168, 34%, 41%);
+  --clr-primary-blue-100: hsl(198, 62%, 26%);
+  --clr-neutral-blue-200:  hsl(212, 27%, 19%);
+  --clr-neutral-grayblue-300:hsl(213, 9%, 39%)
+  --clr-neutral-grayblue-200:hsl(232, 10%, 55%);
+  --clr-neutral-grayblue-100: hsl(210, 4%, 67%)
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  /* font-sizes */
+  --fs-800: 2.7rem;
+  --fs-700: 2.2rem;
+  --fs-600: 1.8rem;
+  --fs-500: 1.2rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.9rem;
+  /* font-families */
+  --ff-barlow: 'Barlow', sans-serif;
+  --ff-fraunces: 'Fraunces', serif;
+}
+
+/* --------------------- */
+/* Tablet Size */
+/* --------------------- */
+@media (min-width: 35em) {
+  /* font-sizes */
+  :root {
+  }
+}
+
+/* --------------------- */
+/* Desktop Size */
+/* --------------------- */
+@media (min-width: 45rem) {
+  /* font-sizes */
+  :root {
+  }
+}
+
+/* Set core body defaults */
+body {
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-400);
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-neutral-grayblue-300);
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
+/* --------------------- */
+/* Utility Classes */
+/* --------------------- */
+
+/* colors */
+
+.primary-red {
+  color: var(--clr-primary-red);
+}
+.primary-yellow {
+  color: var(--clr-primary-yellow);
+}
+.primary-cyan-200 {
+  color: var(--clr-primary-cyan-200);
+}
+.primary-cyan-100 {
+  color: var(--clr-primary-cyan-100);
+}
+.primary-blue-100 {
+  color: var(--clr-primary-blue-100);
+}
+.neutral-blue-200 {
+  color: var(--clr-neutral-blue-200);
+}
+.neutral-grayblue-300 {
+  color: var(--clr-neutral-grayblue-300);
+}
+.neutral-grayblue-200 {
+  color: var(--clr-neutral-grayblue-200);
+}
+.neutral-grayblue-100 {
+  color: var(--clr-neutral-grayblue-100);
+}
+.neutral-white {
+  color: var(--clr-neutral-white);
+}
+
+/* typography */
+.ff-fraunces {
+  font-family: var(--ff-fraunces);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 3px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+.letter-spacing-3 {
+  letter-spacing: 1.5px;
+}
+
+.line-height-1 {
+  line-height: 2.5;
+}
+.line-height-2 {
+  line-height: 1.6;
+}
+.line-height-3 {
+  line-height: 1.2;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+/* select everything that has an adjacent sibling before it */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space--small {
+  --flow-space: 0.5rem;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* screen reader mode only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
