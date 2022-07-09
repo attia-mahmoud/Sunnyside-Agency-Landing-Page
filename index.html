@@ -34,6 +34,17 @@
             Contact
           </p>
         </div>
+        <div class="desktop-menu flex">
+          <p class="fs-400 neutral-white fw-600">About</p>
+          <p class="fs-400 neutral-white fw-600">Services</p>
+          <p class="fs-400 neutral-white fw-600">Projects</p>
+          <p
+            class="fs-300 neutral-grayblue-100 fw-900 ff-fraunces uppercase"
+            id="button-contact"
+          >
+            Contact
+          </p>
+        </div>
       </header>
       <section class="hero flex">
         <h1
@@ -44,7 +55,13 @@
         <img src="./images/icon-arrow-down.svg" alt="arrow" />
       </section>
       <section class="content flex">
-        <img src="./images/mobile/image-transform.jpg" alt="egg" />
+        <picture>
+          <source
+            srcset="./images/desktop/image-transform.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img src="./images/mobile/image-transform.jpg" alt="egg" />
+        </picture>
         <div class="container-text flex">
           <p class="fs-700 fw-900 ff-fraunces neutral-blue-200 line-height-3">
             Transform your brand
@@ -56,7 +73,13 @@
           </p>
           <p class="fw-600 ff-fraunces fw-900 fs-500">Learn more</p>
         </div>
-        <img src="./images/mobile/image-stand-out.jpg" alt="cup" />
+        <picture>
+          <source
+            srcset="./images/desktop/image-stand-out.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img src="./images/mobile/image-stand-out.jpg" alt="cup" />
+        </picture>
         <div class="container-text flex">
           <p class="fs-700 fw-900 ff-fraunces neutral-blue-200 line-height-3">
             Stand out to the right audience
@@ -123,22 +146,46 @@
         </div>
       </section>
       <section class="gallery flex">
-        <img
-          src="./images/mobile/image-gallery-milkbottles.jpg"
-          alt="milkbottles"
-        />
-        <img
-          src="./images/mobile/image-gallery-orange.jpg"
-          alt="orange in a plate"
-        />
-        <img
-          src="./images/mobile/image-gallery-cone.jpg"
-          alt="empty icecream cone"
-        />
-        <img
-          src="./images/mobile/image-gallery-sugar-cubes.jpg"
-          alt="sugar cubes"
-        />
+        <picture>
+          <source
+            srcset="./images/desktop/image-gallery-milkbottles.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="./images/mobile/image-gallery-milkbottles.jpg"
+            alt="milkbottles"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/desktop/image-gallery-orange.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="./images/mobile/image-gallery-orange.jpg"
+            alt="orange in a plate"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/desktop/image-gallery-cone.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="./images/mobile/image-gallery-cone.jpg"
+            alt="empty icecream cone"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/desktop/image-gallery-sugarcubes.jpg"
+            media="(min-width: 1440px)"
+          />
+          <img
+            src="./images/mobile/image-gallery-sugar-cubes.jpg"
+            alt="sugar cubes"
+          />
+        </picture>
       </section>
       <footer class="flex">
         <img src="./images/logo.svg" alt="logo" />
