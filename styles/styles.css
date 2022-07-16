@@ -92,10 +92,12 @@ footer > img {
 
 #photography {
   background-image: url("../images/mobile/image-photography.jpg");
+  /* background-size: contain; */
 }
 
 #graphic-design {
   background-image: url("../images/mobile/image-graphic-design.jpg");
+  /* background-size: contain; */
 }
 
 @media (min-width: 1440px) {
@@ -264,10 +266,15 @@ footer {
   .avatar {
     border-radius: 50%;
     height: 4rem;
+    margin-bottom: 2rem;
   }
 
   .testimonial > p:last-child {
     margin-top: -1.5rem;
+  }
+
+  .testimonial > p:nth-last-child(2) {
+    margin-top: 2rem;
   }
 
   footer > img {
@@ -301,56 +308,54 @@ footer {
     flex-wrap: wrap;
   }
 
-  .content * {
-    flex: 1 1 50%;
+  .content > *:nth-child(-n + 4) {
+    width: 25%;
   }
 
-  /* .content > picture:nth-child(1) {
-    outline: 1px solid red;
-    float: right;
-  } */
+  .content > *:nth-child(n + 2) {
+    flex: 1 1 25%;
+  }
 
   .container-text {
-    --gap: 2rem;
-    justify-content: space-around;
     align-items: flex-start;
     text-align: left;
-    padding-block: 8rem;
-    padding-inline: 15rem;
+    padding: 3rem;
   }
 
   .container-text-image {
-    --gap: 1.5rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding-block: 4rem;
+    justify-content: flex-end;
+    padding-block: 3rem;
     height: 40rem;
-    background-size: cover;
   }
 
   .container-testimonials {
-    --gap: 4rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-block: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-block: 10rem;
+    margin: 0 auto;
+  }
+
+  .container-testimonials > *:first-child {
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
   .testimonial {
     --gap: 2rem;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    width: 29%;
   }
 
   .gallery {
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin-top: 0rem;
+    justify-content: space-between;
   }
 
-  .gallery * {
-    max-width: 50%;
+  .gallery > * {
+    min-width: 25%;
   }
 
   footer {
